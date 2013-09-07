@@ -31,7 +31,8 @@ class Model < ActiveRecord::Base
   validates :email, presence: true
 
 
-  # scopes
+  # scopes (beginning with the default scope if it exists)
+  default_scope { order 'name' }
   scope :something
   
    
