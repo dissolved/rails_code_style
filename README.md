@@ -23,10 +23,14 @@ class Model < ActiveRecord::Base
 
 
   # associations
-  belongs_to :something_else
-  has_many :something
+  belongs_to :onceler
+  has_many :thneeds
 
 
+  # delegates
+  delegate :ethics, :to => :onceler
+  
+  
   # validations
   validates :email, presence: true
 
