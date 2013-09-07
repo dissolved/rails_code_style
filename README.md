@@ -33,7 +33,7 @@ class Model < ActiveRecord::Base
 
   # scopes (beginning with the default scope if it exists)
   default_scope { order 'name' }
-  scope :something
+  scope :red, -> { where(:color => 'red') }
   
    
   # attr macros
