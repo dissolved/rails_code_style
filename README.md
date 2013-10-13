@@ -30,6 +30,8 @@ class Model < ActiveRecord::Base
   # delegates
   delegate :ethics, :to => :onceler
   
+  # serializations
+  serialize :properties, ActiveRecord::Coders::Hstore
   
   # validations
   validates :email, presence: true
